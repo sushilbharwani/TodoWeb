@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-6 center">
+<button class="btn btn-success">Add Todo</button>
+  </div>
+</div> 
+<form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+  <div class="form-group">
+   <label for="title">Title</label>
+    <input type="text" name="title" id="title" class="form-control" ngModel />
+  </div>
+  <div class="form-group">
+  <label for="desc">Description</label>
+  <textarea id="description" name="description" class="form-control" ngModel >  Hi My Name is Sushil Bharwani </textarea>
+  </div>
+  <button type="submit" class="form-control btn btn-success">Save</button>
+</form>
+
+

@@ -1,0 +1,15 @@
+<div *ngFor="let todo of todolist">
+  <div class="list-group">
+  <div class="list-group-item-heading">
+  <div class="pull-left">
+    {{todo.title}}
+  </div>
+  <div class="pull-right">
+  <span class="glyphicon glyphicon-remove" (click)="removeTodo(todo.id)"></span>
+  <span class="glyphicon glyphicon-edit"></span>
+  </div>
+  </div>
+  <div class="clearfix"></div>
+  <p class="list-group-item-text">{{todo.description}}</p>
+  </div>
+</div>
