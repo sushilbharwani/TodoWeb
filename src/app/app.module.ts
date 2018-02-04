@@ -13,6 +13,9 @@ import { todoreducer } from '../app/Reducers/todoreducer';
 import { TodoActions } from '../app/Actions/TodoActions';
 import { TodoService } from '../app/Services/todo.service';
 import {ApiService} from '../app/Services/api.service';
+import { LoginComponent } from './login/login.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +23,16 @@ import {ApiService} from '../app/Services/api.service';
     HeaderComponent,
     TodolistComponent,
     AddtodoComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
-    StoreModule.provideStore({todoreducer})
+    StoreModule.provideStore({todoreducer}),
+    AppRoutingModule
   ],
   providers: [TodoActions, TodoService , ApiService],
   bootstrap: [AppComponent]
